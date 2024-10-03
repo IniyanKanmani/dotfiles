@@ -1,0 +1,9 @@
+# PATH
+export PATH=$PATH:/usr/local/bin/
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/16/bin
+export PATH=$PATH:$HOME/.gem/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
+export PATH=$PATH:$HOME/development/flutter/bin
+export PATH=$PATH:$HOME/Documents/learning/boot_dev/worldbanc/private/bin

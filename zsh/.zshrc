@@ -5,8 +5,8 @@ source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 
 # eza
-alias l="eza --long --all --all --hyperlink --icons --mounts --git --git-repos --total-size --header"
-alias lt="eza --tree --level=2 --long --all --hyperlink --icons --mounts --git --git-repos --total-size --header"
+alias l="eza --long --all --hyperlink --icons --mounts --git --git-repos --total-size --header"
+alias lt="eza --tree --level=2 --long --hyperlink --icons --mounts --git --git-repos --total-size --header"
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -24,5 +24,4 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Environment variables
 export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc
-export TERM=screen-256color
 

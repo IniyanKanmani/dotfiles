@@ -1,0 +1,5 @@
+[theme]
+path = "~/.config/yazi/theme.toml"
+
+[manager]
+show_hidden = true

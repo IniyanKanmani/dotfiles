@@ -31,19 +31,31 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-# eza
-alias l="eza --long --all --hyperlink --icons --mounts --git --git-repos --total-size --header"
-alias lt="eza --tree --level=2 --long --hyperlink --icons --mounts --git --git-repos --total-size --header"
-
-export EZA_CONFIG_DIR="$HOME/.config/eza"
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# eza
+alias l="eza --long --all --hyperlink --icons --mounts --git --git-repos --header"
+alias lt="eza --tree --all --level=2 --long --hyperlink --icons --mounts --git --git-repos --header"
+alias tree="eza --tree --all --level=2 --icons"
+
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+
 # starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+# zsh-vi-mode
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+ZVM_KEYTIMEOUT=0.3
+
+ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+ZVM_VI_VISUAL_ESCAPE_BINDKEY=kj
+ZVM_VI_OPPEND_ESCAPE_BINDKEY=kj
+
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 # zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,4 +1,4 @@
-# highlight = "~/.config/yazi/syntax.tmTheme"
+# highlight = "~/.config/yazi/tokyonight_night.tmTheme"
 
 [manager]
 cwd = { fg = "#a9b1d6", italic = true }
@@ -26,9 +26,13 @@ tab_width    = 1
 count_copied   = { fg = "#c0caf5", bg = "#41a6b5" }
 count_cut      = { fg = "#c0caf5", bg = "#db4b4b" }
 count_selected = { fg = "#c0caf5", bg = "#3d59a1" }
+
 # Border
 border_symbol = "│"
 border_style  = { fg = "#27a1b9" }
+
+# Highlighting
+syntect_theme = "~/.config/yazi/tokyonight_night.tmTheme"
 
 [status]
 separator_open  = ""

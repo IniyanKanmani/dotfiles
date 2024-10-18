@@ -47,22 +47,23 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # zsh-vi-mode
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-ZVM_KEYTIMEOUT=0.3
-
-ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
-ZVM_VI_VISUAL_ESCAPE_BINDKEY=kj
-ZVM_VI_OPPEND_ESCAPE_BINDKEY=kj
-
+source $ZVM_PLUGIN_PATH
+ZVM_KEYTIMEOUT=0.1
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-
-# zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZVM_VI_ESCAPE_BINDKEY=kj
+ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+ZVM_VI_VISUAL_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
 
 # zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $AUTOSUGGEST_PLUGIN_PATH
+bindkey '^Y' autosuggest-accept
+
+# zsh-syntax-highlighting
+source $SYNTAX_HIGHLIGHT_PLUGIN_PATH
+
+# zsh-history-substring-search
+source $HISTORY_SEARCH_PLUGIN_PATH
 
 # Environment variables
 export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc
-

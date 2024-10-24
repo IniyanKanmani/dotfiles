@@ -1,0 +1,16 @@
+[plugin]
+deps = [
+	{ use = "yazi-rs/plugins:git", rev = "4fcd737" },
+	{ use = "yazi-rs/plugins:hide-preview", rev = "4fcd737" },
+	{ use = "yazi-rs/plugins:max-preview", rev = "4fcd737" },
+	{ use = "GrzegorzKozub/mdcat", rev = "1706af4" },
+	{ use = "AnirudhG07/rich-preview", rev = "fe43219" },
+	{ use = "dedukun/relative-motions", rev = "6aecfcd" },
+	{ use = "yazi-rs/plugins:jump-to-char", rev = "4fcd737" },
+	{ use = "pirafrank/what-size", rev = "f08f7f2" },
+	{ use = "boydaihungst/restore", rev = "3388d39" },
+	{ use = "yazi-rs/plugins:full-border", rev = "4fcd737" }
+, { use = "sharklasers996/eza-preview", rev = "7ca4c25" }]
+
+[flavor]
+deps = []

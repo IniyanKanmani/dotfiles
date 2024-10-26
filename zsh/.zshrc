@@ -67,7 +67,11 @@ ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
 
 # zsh-autosuggestions
 source $AUTOSUGGEST_PLUGIN_PATH
-bindkey '^Y' autosuggest-accept
+
+# delaying key bind so the plugin gets loaded before
+zmodload zsh/sched
+sched +1 bindkey '^Y' autosuggest-accept
+sched +1 bindkey '^E' autosuggest-clear
 
 # zsh-syntax-highlighting
 source $SYNTAX_HIGHLIGHT_PLUGIN_PATH

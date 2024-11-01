@@ -79,8 +79,5 @@ source $SYNTAX_HIGHLIGHT_PLUGIN_PATH
 # zsh-history-substring-search
 source $HISTORY_SEARCH_PLUGIN_PATH
 
-# Alias
-alias neovim="nvim --listen /tmp/nvim.pipe"
-
 # Environment variables
 export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc

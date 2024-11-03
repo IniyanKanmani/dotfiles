@@ -81,3 +81,4 @@ source $HISTORY_SEARCH_PLUGIN_PATH
 
 # Environment variables
 export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc
+export GOPATH=$HOME/development/go

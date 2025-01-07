@@ -1,13 +1,6 @@
 # PATH
 export PATH=$PATH:/usr/local/bin/
 export PATH=$PATH:/usr/local/sbin/
-export PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin/
-export PATH=$PATH:/nix/store/pfg4yz6c5kvk8wp29kvp56dl0yjahwgn-nodejs-20.17.0/bin/
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/16/bin/
-export PATH=$PATH:$HOME/.gem/bin/
 export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.pub-cache/bin/
-export PATH=$PATH:$HOME/.npm-packages/bin/
-export PATH=$PATH:$HOME/development/go/bin/
-export PATH=$PATH:$HOME/development/flutter/bin/
+export PATH=$PATH:$HOME/.cargo/bin/
 export PATH=$PATH:$HOME/Documents/learning/boot_dev/worldbanc/private/bin/

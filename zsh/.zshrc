@@ -1,3 +1,25 @@
+# history
+export HISTFILE=~/.zsh_history
+
+# set the maximum number of history entries
+HISTSIZE=10000
+SAVEHIST=10000
+
+# append history instead of overwriting
+setopt APPEND_HISTORY
+
+# # share history across all sessions
+# setopt SHARE_HISTORY
+
+# save each command to the history file as it's executed
+setopt INC_APPEND_HISTORY
+
+# ignore duplicate entries
+setopt HIST_IGNORE_DUPS
+
+# remove commands that begin with a space from the history
+setopt HIST_IGNORE_SPACE
+
 # editor
 export EDITOR=nvim
 

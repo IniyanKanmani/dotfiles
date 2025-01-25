@@ -80,7 +80,7 @@ eval "$(starship init zsh)"
 
 # zsh-vi-mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
-# source $ZVM_PLUGIN_PATH
+
 ZVM_KEYTIMEOUT=0.1
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 ZVM_VI_ESCAPE_BINDKEY=kj
@@ -90,21 +90,22 @@ ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
 
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $AUTOSUGGEST_PLUGIN_PATH
 
-# delaying key bind so the plugin gets loaded before
+# delaying key binding so the plugin gets loaded first
 zmodload zsh/sched
 sched +1 bindkey '^Y' autosuggest-accept
 sched +1 bindkey '^E' autosuggest-clear
 
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source $SYNTAX_HIGHLIGHT_PLUGIN_PATH
 
 # zsh-history-substring-search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-# source $HISTORY_SEARCH_PLUGIN_PATH
 
-# Environment variables
-# export CHROME_EXECUTABLE=/Applications/Arc.app/Contents/MacOS/Arc
-export GOPATH=$HOME/development/go
+# Startup commands
+# if [[ -z "$TMUX" ]]
+# then
+#     fastfetch
+# else
+#     neofetch
+# fi

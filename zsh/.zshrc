@@ -91,7 +91,7 @@ ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# delaying key binding so the plugin gets loaded first
+# delaying key binding so the plugin gets loaded before
 zmodload zsh/sched
 sched +1 bindkey '^Y' autosuggest-accept
 sched +1 bindkey '^E' autosuggest-clear
@@ -103,9 +103,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Startup commands
-# if [[ -z "$TMUX" ]]
-# then
-#     fastfetch
+if [[ -z "$TMUX" ]]
+then
+    fastfetch
 # else
 #     neofetch
-# fi
+fi

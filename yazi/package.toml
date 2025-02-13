@@ -1,17 +1,52 @@
-[plugin]
-deps = [
-	{ use = "yazi-rs/plugins:git", rev = "600614a" },
-	{ use = "yazi-rs/plugins:hide-preview", rev = "600614a" },
-	{ use = "yazi-rs/plugins:max-preview", rev = "600614a" },
-	{ use = "GrzegorzKozub/mdcat", rev = "d3d5089" },
-	{ use = "AnirudhG07/rich-preview", rev = "8be4d27" },
-	{ use = "dedukun/relative-motions", rev = "df97039" },
-	{ use = "yazi-rs/plugins:jump-to-char", rev = "600614a" },
-	{ use = "pirafrank/what-size", rev = "b23e3a4" },
-	{ use = "boydaihungst/restore", rev = "ffc209e" },
-	{ use = "yazi-rs/plugins:full-border", rev = "600614a" },
-	# { use = "sharklasers996/eza-preview", rev = "7ca4c25" }
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8945e54"
+hash = "771f18427fb75fb19990ce602bb322f4"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:hide-preview"
+rev = "8945e54"
+hash = "55904f17e1053cfb91dacd9015a99f9d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "8945e54"
+hash = "15b2ff7f6563c14d5b2e93b3e9da35de"
+
+[[plugin.deps]]
+use = "GrzegorzKozub/mdcat"
+rev = "d3d5089"
+hash = "40c20e6c1085d1f45309b9f148bf4f6e"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "2559e5f"
+hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
+
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "0d9c8cf"
+hash = "561ad872c77b95360c2657c5e8d395ed"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "8945e54"
+hash = "af11685de39c366ec1137fcbccacdbff"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "b23e3a4"
+hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "89fddfd"
+hash = "b442aa672e07ec0765b4b00e7bfdc9b5"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "8945e54"
+hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
 
 [flavor]
 deps = []

@@ -11,7 +11,6 @@ prepend_fetchers = [
 ]
 
 prepend_previewers = [
-    { name = "*/", run = "eza-preview" },
     { name = "*.md", run = "mdcat" },
     { name = "*.csv", run = "rich-preview"},
     { name = "*.rst", run = "rich-preview"},

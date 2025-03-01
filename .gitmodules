@@ -1,0 +1,31 @@
+[submodule "ghostty"]
+	path = ghostty
+	url = git@github.com:IniyanKanmani/ghostty.git
+	
+[submodule "hypr"]
+	path = hypr
+	url = git@github.com:IniyanKanmani/hypr.git
+
+[submodule "kitty"]
+	path = kitty
+	url = git@github.com:IniyanKanmani/kitty.git
+	
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:IniyanKanmani/nvim.git
+
+[submodule "starship"]
+	path = starship
+	url = git@github.com:IniyanKanmani/starship.git
+
+[submodule "tmux"]
+	path = tmux
+	url = git@github.com:IniyanKanmani/tmux.git
+	
+[submodule "waybar"]
+	path = waybar
+	url = git@github.com:IniyanKanmani/waybar.git
+
+[submodule "wezterm"]
+	path = wezterm
+	url = git@github.com:IniyanKanmani/wezterm.git

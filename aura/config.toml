@@ -1,0 +1,29 @@
+[general]
+cpus = 12
+editor = "nvim"
+doas = false
+language = "en-US"
+noconfirm = false
+
+[aur]
+build = "/home/iniyankanmani/.cache/aura/builds"
+cache = "/home/iniyankanmani/.cache/aura/cache"
+clones = "/home/iniyankanmani/.cache/aura/packages"
+hashes = "/home/iniyankanmani/.cache/aura/hashes"
+chroot = []
+ignores = []
+git = false
+hotedit = false
+shellcheck = false
+diff = false
+delmakedeps = false
+clean = false
+warn_unknowns = true
+nocheck = false
+skipdepcheck = false
+reverse = false
+
+[backups]
+snapshots = "/home/iniyankanmani/.cache/aura/snapshots"
+automatic = true
+

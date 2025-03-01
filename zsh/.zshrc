@@ -78,6 +78,9 @@ function y() {
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
+# fastfetch
+alias fastfetch="fastfetch --kitty-icat ~/.config/fastfetch/pngs/arch.png"
+
 # zsh-vi-mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 
@@ -103,9 +106,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Startup commands
-if [[ -z "$TMUX" ]]
-then
-    fastfetch
-# else
-#     neofetch
-fi
+fastfetch

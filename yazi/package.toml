@@ -1,22 +1,17 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "8945e54"
-hash = "771f18427fb75fb19990ce602bb322f4"
+rev = "b12a9ab"
+hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:hide-preview"
-rev = "8945e54"
-hash = "55904f17e1053cfb91dacd9015a99f9d"
+rev = "b12a9ab"
+hash = "53f826884e2c7e521cecc492a7f31d7e"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:max-preview"
-rev = "8945e54"
-hash = "15b2ff7f6563c14d5b2e93b3e9da35de"
-
-[[plugin.deps]]
-use = "GrzegorzKozub/mdcat"
-rev = "d3d5089"
-hash = "40c20e6c1085d1f45309b9f148bf4f6e"
+rev = "b12a9ab"
+hash = "a8025f2bb311e869069364fba01abffc"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
@@ -25,28 +20,33 @@ hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
-rev = "0d9c8cf"
-hash = "561ad872c77b95360c2657c5e8d395ed"
+rev = "ce2e890"
+hash = "23915860e59348bf4166778bb0e606f7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "8945e54"
-hash = "af11685de39c366ec1137fcbccacdbff"
-
-[[plugin.deps]]
-use = "pirafrank/what-size"
-rev = "b23e3a4"
-hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+rev = "b12a9ab"
+hash = "a670c03eb3760812e044a24f94cedc55"
 
 [[plugin.deps]]
 use = "boydaihungst/restore"
-rev = "89fddfd"
-hash = "b442aa672e07ec0765b4b00e7bfdc9b5"
+rev = "328dd88"
+hash = "ad406e4a5ada589211e6ffe8bad3c983"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "8945e54"
-hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
+rev = "b12a9ab"
+hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "b12a9ab"
+hash = "dd97eede8e20e59cd2604e8006e470e2"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "f1c6b69"
+hash = "6e789212eb41d937bab04877ca361099"
 
 [flavor]
 deps = []

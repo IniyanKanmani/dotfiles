@@ -1,13 +1,13 @@
 require("git"):setup()
 
-THEME.git = THEME.git or {}
-THEME.git.modified_sign = "M"
-THEME.git.added_sign = "A"
-THEME.git.untracked_sign = "?"
-THEME.git.ignored_sign = "!"
-THEME.git.deleted_sign = "D"
-THEME.git.updated_sign = "M"
+th.git = th.git or {}
+th.git.modified_sign = "M"
+th.git.added_sign = "A"
+th.git.untracked_sign = "?"
+th.git.ignored_sign = "!"
+th.git.deleted_sign = "D"
+th.git.updated_sign = "M"
 
 require("full-border"):setup()
 
--- require("relative-motions"):setup({ show_numbers = "relative", show_motion = true })
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true })

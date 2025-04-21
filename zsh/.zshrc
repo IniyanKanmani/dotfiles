@@ -105,5 +105,23 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # zsh-history-substring-search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# tgpt chatbots
+source ~/.config/zsh/apikeys
+
+alias t-isou=tgpt --provider isou
+
+alias t-dsr=tgpt --provider deepseek
+
+alias t-ggf=tgpt --provider gemini
+
+alias t-pc4=tgpt --provider pollinations --model openai
+alias t-pc4l=tgpt --provider pollinations --model openai-large
+alias t-pco4=tgpt --provider pollinations --model openai-reasoning
+
+alias t-pdr=tgpt --provider pollinations --model deepseek-reasoning
+alias t-pdrl=tgpt --provider pollinations --model deepseek-reasoning-large
+
+alias t-pgg=tgpt --provider pollinations --model gemini
+
 # Startup commands
 fastfetch

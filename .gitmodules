@@ -14,6 +14,10 @@
 	path = nvim
 	url = git@github.com:IniyanKanmani/nvim.git
 
+[submodule "opencode"]
+	path = opencode
+	url = git@github.com:IniyanKanmani/opencode.git
+
 [submodule "starship"]
 	path = starship
 	url = git@github.com:IniyanKanmani/starship.git
@@ -21,7 +25,7 @@
 [submodule "tmux"]
 	path = tmux
 	url = git@github.com:IniyanKanmani/tmux.git
-	
+
 [submodule "waybar"]
 	path = waybar
 	url = git@github.com:IniyanKanmani/waybar.git

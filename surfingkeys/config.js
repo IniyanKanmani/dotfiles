@@ -1,17 +1,17 @@
 // Normal Mode
+api.map("<Ctrl-'>", "<Esc>"); // Esc
 api.map("H", "S"); // Go Back one Page
 api.map("J", "R"); // Switch to Previous Tab
 api.map("K", "E"); // Switch to Next Tab
 api.map("L", "D"); // Go Forward one Page
 
-api.map("<Ctrl-Esc>", "<Esc>"); // Esc
+// api.map("<Ctrl-Esc>", "<Esc>"); // Esc
 api.map(";la", ";ql"); // View Last Command
 
 api.map("D", "P"); // Scroll one Full Page
-api.map("F", "af"); // Open Link in new Tab
 
-api.map("a", "i"); // Go to Edit Box
-api.map("A", "I"); // Go to Edit Box with Vim Editor Mode
+// api.map("a", "i"); // Go to Edit Box
+// api.map("A", "I"); // Go to Edit Box with Vim Editor Mode
 
 api.map(";M", "<Ctrl-h>"); // Mouse Out Element ?
 api.map("^", "0"); // Scroll full left
@@ -19,34 +19,42 @@ api.map("^", "0"); // Scroll full left
 api.map("gxj", "gxT"); // Close Previous Tab
 api.map("gxk", "gxt"); // Close Next Tab
 
-api.map(";tu", ";u");
+api.map(";tu", ";u"); // This is for swaping
 api.map(";u", ";U"); // Edit Url and Open in Current Tab
 api.map(";U", ";tu"); // Edit Url and Open in New Tab
 
-api.map("<Alt-f>", "cf"); // Open Multiple Link's in New Tab
 api.map("<Alt-t>", "<Alt-s>"); // Toggle Surfing Keys on current Tab
 api.map("<Alt-p>", "<Alt-i>"); // Enter Pass Through Mode
+
+// api.map("F", "af"); // Open Link in new Tab
+// api.map("gf", "gf"); // Open in non active new tab
+api.map("sf", "cf"); // Open multiple tabs non active new tab
+
+api.map("<Ctrl-o>", "<Ctrl-6>"); // Switch to last visited tab
 
 api.map("g^", "g0"); // Goto first tab
 api.map("gx^", "gx0"); // Close all tabs before current
 
 api.unmap("e");
 api.unmap("P");
+api.unmap("C");
 api.unmap("R");
 api.unmap("E");
 api.unmap("<Alt-s>");
+api.unmap("<Alt-f>");
 api.unmap("<Alt-i>");
 api.unmap("0");
 api.unmap("g0");
 api.unmap("gx0");
-api.unmap("af");
-api.unmap("cf");
-api.unmap("C");
+// api.unmap("af");
+// api.unmap("gf");
+// api.unmap("cf");
 api.unmap("S");
 api.unmap("B");
 api.unmap(";tu");
 api.unmap("O");
 api.unmap("<Ctrl-j>");
+api.unmap("<Ctrl-6>");
 
 // Insert Mode
 api.imap("<Ctrl-;>", "<Esc>"); // Esc
@@ -64,15 +72,18 @@ api.iunmap("<Ctrl-f>");
 api.iunmap("<Ctrl-e>");
 
 // Visual Mode
+api.vmap("<Ctrl-'>", "<Esc>"); // Esc
 api.vmap("^", "0"); // Goto start of sentence
 
 api.vunmap("<Esc>");
 api.vunmap("0");
 
 // Omibar Mode
-api.cmap("<Ctrl-Esc>", "Esc"); // Esc
+api.cmap("<Ctrl-'>", "<Esc>"); // Esc
+// api.cmap("<Ctrl-Esc>", "Esc"); // Esc
 
 // Lurk Mode
+api.lmap("<Ctrl-'>", "<Esc>"); // Esc
 api.lmap("<Alt-p>", "<Alt-i>"); // Enter Normal Mode
 
 api.unmap("<Esc>");

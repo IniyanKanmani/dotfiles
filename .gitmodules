@@ -1,7 +1,7 @@
 [submodule "ghostty"]
 	path = ghostty
 	url = git@github.com:IniyanKanmani/ghostty.git
-	
+
 [submodule "hypr"]
 	path = hypr
 	url = git@github.com:IniyanKanmani/hypr.git
@@ -9,10 +9,14 @@
 [submodule "kitty"]
 	path = kitty
 	url = git@github.com:IniyanKanmani/kitty.git
-	
+
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:IniyanKanmani/nvim.git
+
+[submodule "omp"]
+	path = omp
+	url = git@github.com:IniyanKanmani/omp.git
 
 [submodule "opencode"]
 	path = opencode

@@ -1,0 +1,54 @@
+theme = "tokyo-night"
+# vcs = "git"
+mode="split"
+watch = true
+exclude_untracked = false
+line_numbers = true
+tab_width = 4
+wrap_lines = true
+hunk_headers = true
+menu_bar = true
+agent_notes = true
+transparent_background = false
+copy_decorations = false
+cursor_line = "row"
+
+# vim-style keybindings (modeless; replaces hunk defaults for these commands)
+[keybindings]
+# app
+"hunk.app.quit" = "q"
+"hunk.app.refresh" = "r"
+"hunk.app.toggleFocusArea" = "tab"
+"hunk.app.toggleHelp" = "?"
+# review — movement
+"hunk.review.editSelectedFile" = "e"
+"hunk.review.focusFilter" = "/"
+"hunk.review.halfPageDown" = "ctrl+d"
+"hunk.review.halfPageUp" = "ctrl+u"
+"hunk.review.jumpToBottom" = ["G", "end"]
+"hunk.review.jumpToTop" = ["g", "home"]
+"hunk.review.nextAnnotatedHunk" = ["}", "n"]
+"hunk.review.nextFile" = "."
+"hunk.review.nextHunk" = "]"
+"hunk.review.pageDown" = ["ctrl+f", "pagedown"]
+"hunk.review.pageUp" = ["ctrl+b", "pageup"]
+"hunk.review.previousAnnotatedHunk" = ["{", "N"]
+"hunk.review.previousFile" = ","
+"hunk.review.previousHunk" = "["
+"hunk.review.scrollCodeLeft" = ["h", "left"]
+"hunk.review.scrollCodeRight" = ["l", "right"]
+"hunk.review.startNote" = "c"
+"hunk.review.stepDown" = ["j", "down"]
+"hunk.review.stepUp" = ["k", "up"]
+"hunk.review.toggleHunkGap" = "z"
+# view
+"hunk.view.layoutAuto" = "0"
+"hunk.view.layoutSplit" = "1"
+"hunk.view.layoutStack" = "2"
+"hunk.view.openThemeSelector" = "t"
+"hunk.view.toggleAgentNotes" = "a"
+"hunk.view.toggleHunkHeaders" = "m"
+"hunk.view.toggleLineNumbers" = ""
+"hunk.view.toggleLineWrap" = "w"
+"hunk.view.toggleMenuBar" = ""
+"hunk.view.toggleSidebar" = "s"

@@ -1,70 +1,44 @@
-# history
-export HISTFILE=~/.zsh_history
+#! /bin/zsh
 
-# set the maximum number of history entries
 HISTSIZE=10000
 SAVEHIST=10000
 
-# append history instead of overwriting
 setopt APPEND_HISTORY
-
-# # share history across all sessions
 # setopt SHARE_HISTORY
-
-# save each command to the history file as it's executed
 setopt INC_APPEND_HISTORY
-
-# ignore duplicate entries
 setopt HIST_IGNORE_DUPS
-
-# remove commands that begin with a space from the history
 setopt HIST_IGNORE_SPACE
 
-# editor
-export EDITOR=nvim
+# if [ -f ~/.config/zsh/apikeys.zsh ]; then
+#     source ~/.config/zsh/apikeys.zsh
+# fi
 
-# fzf
-source <(fzf --zsh)
+# zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-    --highlight-line \
-    --info=inline-right \
-    --ansi \
-    --layout=reverse \
-    --border=none
-    --color=bg+:#283457 \
-        --color=bg:-1 \
-        --color=border:#27a1b9 \
-        --color=fg:#c0caf5 \
-        --color=gutter:-1 \
-        --color=header:#ff9e64 \
-        --color=hl+:#2ac3de \
-        --color=hl:#2ac3de \
-        --color=info:#545c7e \
-        --color=marker:#ff007c \
-        --color=pointer:#ff007c \
-        --color=prompt:#2ac3de \
-        --color=query:#c0caf5:regular \
-        --color=scrollbar:#27a1b9 \
-        --color=separator:#ff9e64 \
-        --color=spinner:#ff007c \
-        "
+# zsh-defer
+source /usr/share/zsh/plugins/zsh-defer/zsh-defer.plugin.zsh
 
-# zoxide
-eval "$(zoxide init --cmd cd zsh)"
+# zsh-history-substring-search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
+# zsh-syntax-highlighting - deferred for faster startup
+zsh-defer source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# eza
-alias l="eza --long --all --hyperlink --icons --mounts --git --git-repos --header"
-alias lt="eza --tree --all --level=2 --long --hyperlink --icons --mounts --git --git-repos --header"
-alias tree="eza --tree --all --level=2 --icons"
+# zsh-vi-mode - deferred for faster startup
+ZVM_KEYTIMEOUT=0.1
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+ZVM_VI_ESCAPE_BINDKEY=kj
+ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+ZVM_VI_VISUAL_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+zsh-defer source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 
-export EZA_CONFIG_DIR="$HOME/.config/eza"
+# Defer autosuggestions keybindings for faster startup
+zsh-defer bindkey "^Y" autosuggest-accept
+zsh-defer bindkey "^E" autosuggest-clear
 
-# yazi
+# yazi file manager integration
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
@@ -74,54 +48,75 @@ function y() {
     rm -f -- "$tmp"
 }
 
-# starship
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-eval "$(starship init zsh)"
+load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
+# Wrapper functions that load NVM on first use, then remove themselves
+nvm() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; nvm "$@"; }
+node() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; node "$@"; }
+npm() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; npm "$@"; }
+npx() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; npx "$@"; }
+yarn() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; yarn "$@"; }
+pnpm() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; pnpm "$@"; }
+pnpx() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; pnpx "$@"; }
+bun() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; bun "$@"; }
+bunx() { unset -f nvm node npm npx yarn pnpm pnpx bun bunx 2>/dev/null; load_nvm; bunx "$@"; }
+
+# Cached initialization for faster startup
+cache_dir="$HOME/.cache/zsh"
+mkdir -p "$cache_dir"
+
+# Function to cache command output
+cache_init() {
+    local cmd="$1"
+    local cache_file="$cache_dir/${cmd}.zsh"
+    local max_age=86400  # 1 day in seconds
+
+    if [[ ! -f "$cache_file" ]] || [[ $(($(date +%s) - $(stat -c %Y "$cache_file" 2>/dev/null || stat -f %m "$cache_file" 2>/dev/null))) -gt $max_age ]]; then
+        case $cmd in
+            starship) starship init zsh > "$cache_file" 2>/dev/null ;;
+            zoxide) zoxide init --cmd cd zsh > "$cache_file" 2>/dev/null ;;
+        esac
+    fi
+    [[ -f "$cache_file" ]] && source "$cache_file"
+}
+
+# zoxide - fast directory jumper
+# eval "$(zoxide init --cmd cd zsh)"
+cache_init zoxide
+
+# starship - cross-shell prompt
+# eval "$(starship init zsh)"
+cache_init starship
+
+# fzf - command-line fuzzy finder
+source <(fzf --zsh)
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# eza
+alias l="eza --long --all --hyperlink --icons --mounts --git --git-repos --header"
+alias lt="eza --tree --all --level=2 --long --hyperlink --icons --mounts --git --git-repos --header"
+alias tree="eza --tree --all --level=2 --icons"
 
 # fastfetch
 alias fastfetch="fastfetch --kitty-icat ~/.config/fastfetch/pngs/arch.png"
 
-# zsh-vi-mode
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+# Gemini-cli
+alias gemini-cli="gemini -m \"gemini-2.5-pro\""
 
-ZVM_KEYTIMEOUT=0.1
-ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-ZVM_VI_ESCAPE_BINDKEY=kj
-ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
-ZVM_VI_VISUAL_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
-ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+# VSCodium
+alias codium="vscodium-electron"
 
-# zsh-autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# delaying key binding so the plugin gets loaded before
-zmodload zsh/sched
-sched +1 bindkey '^Y' autosuggest-accept
-sched +1 bindkey '^E' autosuggest-clear
-
-# zsh-syntax-highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# zsh-history-substring-search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# tgpt chatbots
-source ~/.config/zsh/apikeys
-
-alias t-isou=tgpt --provider isou
-
-alias t-dsr=tgpt --provider deepseek
-
-alias t-ggf=tgpt --provider gemini
-
-alias t-pc4=tgpt --provider pollinations --model openai
-alias t-pc4l=tgpt --provider pollinations --model openai-large
-alias t-pco4=tgpt --provider pollinations --model openai-reasoning
-
-alias t-pdr=tgpt --provider pollinations --model deepseek-reasoning
-alias t-pdrl=tgpt --provider pollinations --model deepseek-reasoning-large
-
-alias t-pgg=tgpt --provider pollinations --model gemini
+# # Wayland scaling fixes for Electron apps
+# alias slack='slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations --disable-features=WaylandFractionalScaleV1'
+# alias discord='discord --enable-features=UseOzonePlatform --ozone-platform=x11'
 
 # Startup commands
-fastfetch
+# eval "$(pyenv init -)"
+# fastfetch

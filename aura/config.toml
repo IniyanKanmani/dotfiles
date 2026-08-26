@@ -21,7 +21,7 @@ clean = false
 warn_unknowns = true
 nocheck = false
 skipdepcheck = false
-reverse = false
+reverse = true
 
 [backups]
 snapshots = "/home/iniyankanmani/.cache/aura/snapshots"

@@ -47,9 +47,8 @@ keymap = [
 
 	# Operation
 	# { on = "o",         run = "open",                        desc = "Open selected files" },
-	# { on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "o",         run = "create",                      desc = "Create a file (ends with / for directories)" }, # Custom
-	{ on = "O",         run = "create",                      desc = "Create a file (ends with / for directories)" }, # Custom
+	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "<Enter>",   run = "open",                        desc = "Open selected files" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "y",         run = "yank",                        desc = "Yank selected files (copy)" },
@@ -63,12 +62,12 @@ keymap = [
 	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
 	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
-	{ on = "i",         run = "rename --empty=stem --cursor=start",                      desc = "Rename stem" }, # Custom
-	{ on = "I",         run = "rename --cursor=start",                      desc = "Rename from start of name" }, # Custom
-	{ on = "a",         run = "rename --empty=ext",                      desc = "Rename extension" }, # Custom
-	{ on = "A",         run = "rename --cursor=end",                      desc = "Rename from end of name" }, # Custom
+	{ on = "i",         run = "rename --empty=stem --cursor=start", desc = "Rename stem" }, # Custom
+	{ on = "I",         run = "rename --cursor=start",       desc = "Rename from start of name" }, # Custom
+	{ on = "a",         run = "rename --empty=ext",          desc = "Rename extension" }, # Custom
+	{ on = "A",         run = "rename --cursor=end",         desc = "Rename from end of name" }, # Custom
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" }, # Custom
-	{ on = "R",         run = "rename --empty=all",  desc = "Rename whole name" }, # Custom
+	{ on = "R",         run = "rename --empty=all",          desc = "Rename whole name" }, # Custom
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
 	{ on = ":",         run = "shell --block --interactive", desc = "Run a shell command (block until finishes)" },
 	{ on = ".",         run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
@@ -145,10 +144,9 @@ keymap = [
 ]
 
 prepend_keymap = [
-        { on   = "<C-f>", run  = "plugin toggle-pane max-preview", desc = "Maximize or restore preview" },
-        { on   = "<C-t>", run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
-        { on   = "E" , run = "plugin eza-preview",  desc = "Toggle tree/list dirworkspace preview" },
-        { on   = "M", run  = "plugin mount", desc = "Mount menu" },
+	{ on   = "<C-f>", run  = "plugin toggle-pane max-preview", desc = "Maximize or restore preview" },
+	{ on   = "<C-t>", run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
+	{ on   = "M", run  = "plugin mount", desc = "Mount menu" },
 	{ on   = [ ".", "s" ], run  = "plugin what-size", desc = "Calc size of selection or cwd" },
 	{ on   = "u", run = "plugin restore", desc = "Restore last deleted files/folders" },
 	{ on   = "<C-k>", run = "plugin kdeconnect-send", desc = "Send selected files via KDE Connect" },

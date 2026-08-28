@@ -1,37 +1,32 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "68f7d48"
-hash = "36a484acf6a0a0219c543ccb4cee218f"
+rev = "c591a36"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "573b275"
-hash = "c3e2871c9ef244fd181f203791f9b0d2"
+rev = "02597c4"
+hash = "33982a6e2d6df07619a2a0fc163a0950"
 
 [[plugin.deps]]
 use = "boydaihungst/restore"
-rev = "4eda0bf"
-hash = "778941e7f1ebbacd60f4e254bb3c51de"
+rev = "7bfcfcb"
+hash = "bbb1569978e6d2b3e8343c6ca08a4ea6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "68f7d48"
-hash = "3996fc74044bc44144b323686f887e1"
+rev = "c591a36"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "68f7d48"
-hash = "e2d4bfccf31e5ab05f46fee4797c5215"
+rev = "c591a36"
+hash = "b95f898e6dc60b52edbc415952e14395"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "179ebf6"
-hash = "57056b9728006881d580ccabe8154a9c"
-
-[[plugin.deps]]
-use = "Reledia/hexyl"
-rev = "016a09b"
-hash = "50da29476e744dba37d77fb209328fd1"
+rev = "ec94d9a"
+hash = "4b546f609ab8630a083cecf9ab5091d2"
 
 [[plugin.deps]]
 use = "AnirudhG07/nbpreview"
@@ -40,13 +35,13 @@ hash = "b83919985400521dee78e1c352b5d9db"
 
 [[plugin.deps]]
 use = "Deepak22903/kdeconnect-send"
-rev = "7d9098d"
-hash = "498bda3e06d793f79fe1df7b28fc14a1"
+rev = "06674d1"
+hash = "869884767c2ef592bfb7f5764f8fcae3"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "0e56060"
-hash = "ab2e66065a94cca4886b303518e44bd8"
+rev = "e73fd74"
+hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [[plugin.deps]]
 use = "wylie102/duckdb"
@@ -55,23 +50,28 @@ hash = "87b9233a74325e95011670ed20bbd0d4"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "68f7d48"
-hash = "8a7c58225816a163a6e8730c0adafbc8"
+rev = "c591a36"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [[plugin.deps]]
-use = "dedukun/relative-motions"
-rev = "a603d9e"
-hash = "e02a788e5b8ae0fb47fd0193dda589cc"
+use = "Jormala/relative-motions"
+rev = "d4f2003"
+hash = "e0017cae4c0772dd41b7e7c259a6e683"
+
+[[plugin.deps]]
+use = "czlaci/hexyl"
+rev = "64fe5bd"
+hash = "7c36afe6024354b5beb9211e62c28d69"
 
 [[flavor.deps]]
 use = "kalidyasin/yazi-flavors:tokyonight-night"
-rev = "fa19b40"
-hash = "fd99189fe362330c683de88d7189b44"
+rev = "bfd1b37"
+hash = "f9d70de81ed3b4ed309411f65b7c6f25"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "4a1802a"
-hash = "b951d27afe197d154f6da9683b46c5f8"
+rev = "20b47bf"
+hash = "ce320f877fe709b189433941aba747c4"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

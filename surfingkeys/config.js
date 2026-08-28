@@ -54,7 +54,7 @@ api.unmap("B");
 api.unmap(";tu");
 api.unmap("O");
 api.unmap("<Ctrl-j>");
-api.unmap("<Ctrl-6>");
+// api.unmap("<Ctrl-6>");
 
 // Insert Mode
 api.imap("<Ctrl-;>", "<Esc>"); // Esc
@@ -68,6 +68,7 @@ api.iunmap("<Alt-b>");
 api.iunmap("<Alt-f>");
 api.iunmap("<Alt-w>");
 api.iunmap("<Alt-d>");
+api.iunmap("<Ctrl-a>");
 api.iunmap("<Ctrl-f>");
 api.iunmap("<Ctrl-e>");
 
@@ -151,8 +152,10 @@ settings.hintAlign = "center";
 settings.scrollStepSize = 100;
 settings.showModeStatus = true;
 settings.defaultSearchEngine = "b";
+// settings.lurkingPattern =
+//   /https:\/\/github\.com|https:\/\/www\.boot\.dev|.*confluence.*/i;
 settings.lurkingPattern =
-  /https:\/\/github\.com|https:\/\/www\.boot\.dev|.*confluence.*/i;
+  /https:\/\/www\.boot\.dev|.*confluence.*|docs.google.com|teams.cloud.microsoft/i;
 // settings.blocklistPattern = "";
 
 // set theme

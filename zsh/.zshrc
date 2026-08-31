@@ -9,10 +9,6 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 
-# if [ -f ~/.config/zsh/apikeys.zsh ]; then
-#     source ~/.config/zsh/apikeys.zsh
-# fi
-
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -93,6 +89,9 @@ cache_init starship
 
 # fzf - command-line fuzzy finder
 source <(fzf --zsh)
+
+# atuin - command line history db
+eval "$(atuin init zsh)"
 
 alias ..="cd .."
 alias ...="cd ../.."

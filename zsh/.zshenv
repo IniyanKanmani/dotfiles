@@ -55,6 +55,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 
 # Opencode Variables
 export OPENCODE_ADVISOR_LEVEL=normal
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
 
 # OpenChamber Variables
 export OPENCHAMBER_HOST=0.0.0.0
